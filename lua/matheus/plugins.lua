@@ -44,6 +44,7 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- packer manages itself
     use "nvim-lua/popup.nvim"   -- implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- useful lua functions used by lots of plugins
+    use "lunarvim/colorschemes"
 
     if PACKER_BOOSTRAP then
         require("packer").sync()
