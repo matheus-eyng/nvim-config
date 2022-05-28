@@ -75,6 +75,11 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"
     use "nvim-treesitter/playground"
 
+    use "EdenEast/nightfox.nvim" -- Packer
+    use "arcticicestudio/nord-vim"
+
+    use "lewis6991/gitsigns.nvim"
+
     if PACKER_BOOSTRAP then
         require("packer").sync()
     end
