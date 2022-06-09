@@ -1,5 +1,5 @@
 
-local colorscheme = "nord"
+local colorscheme = "kanagawa"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 

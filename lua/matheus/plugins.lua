@@ -86,6 +86,8 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use "moll/vim-bbye"
 
+    use "rebelot/kanagawa.nvim"
+
     if PACKER_BOOSTRAP then
         require("packer").sync()
     end
