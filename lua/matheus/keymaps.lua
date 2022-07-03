@@ -6,7 +6,7 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
---keymap("", "<Space>", "<Nop>", opts)
+keymap("", ",", "<Nop>", opts)
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
@@ -24,11 +24,11 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-
+keymap("n", "<Leader>x", ":bd<CR>", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
@@ -42,7 +42,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press jk fast to enter
---keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -63,16 +63,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files()<cr>", opts)
-keymap("n", "<leader>t", "<cmd>Telescope live_grep<cr>", opts)
-
-keymap("n", "<leader>b", ":bd<cr>", opts)
-
--- Nvim-tree
+-- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
