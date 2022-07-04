@@ -82,6 +82,11 @@ return packer.startup(function(use)
 
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
