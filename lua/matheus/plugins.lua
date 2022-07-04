@@ -76,6 +76,12 @@ return packer.startup(function(use)
 
   use "sainnhe/sonokai"
 
+  use "navarasu/onedark.nvim"
+
+  use "lewis6991/gitsigns.nvim"
+
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
